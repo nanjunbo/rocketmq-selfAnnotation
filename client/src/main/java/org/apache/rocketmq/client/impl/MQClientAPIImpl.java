@@ -200,6 +200,7 @@ public class MQClientAPIImpl {
 
     public String fetchNameServerAddr() {
         try {
+            //发起远程调用获取nameserver地址
             String addrs = this.topAddressing.fetchNSAddr();
             if (addrs != null) {
                 if (!addrs.equals(this.nameSrvAddr)) {
